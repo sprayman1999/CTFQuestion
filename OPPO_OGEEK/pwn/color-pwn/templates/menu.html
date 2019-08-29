@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Operate File</title>
+    </head>
+    <body>
+        <form id="form0" action="/upload" method="post">
+            Commitor
+            <input type="text" name="commitor" id="commitor" maxlength="16" >
+            Commits
+            <input type="text" name="commits" id="commits" maxlength="32">
+            <br/>choose an option to edit your bmp<br/>
+            <label><input id="op2" name="op2bmp" type="radio" value="1" />1. Restore color (more red)</label><br/>
+            <label><input id="op2" name="op2bmp" type="radio" value="2" />2. Restore color (more green)</label><br/>
+            <label><input id="op2" name="op2bmp" type="radio" value="3" />3. Restore color (more blue)</label><br/>
+            <label><input id="op2" name="op2bmp" type="radio" value="4" />4. Adjust brightness (more dark)</label><br/>
+            <label><input id="op2" name="op2bmp" type="radio" value="5" />5. Adjust brightness (more light)</label><br/>
+            <label><input id="op2" name="op2bmp" type="radio" value="6" />6. Abstract painting (ramdom)</label><br/>
+            <label><input id="op2" name="op2bmp" type="radio" value="7" />7. Exit</label><br/><br/>
+            <td><input id="me" type="submit" value="Commit it!" onclick="mysubmit()"></td>
+            <script type="text/javascript">
+                function mysubmit(){
+                    var _commitor = document.getElementById('commitor').value;
+                    var _commits = document.getElementById('commits').value;
+                    if(_commitor=='' || _commits=='' || _commitor.length > 0x10 || _commits.length > 0x20){
+                        alert('Content cannot be NULL')
+                    }else{
+                        document.getElementById("commitor").value = window.btoa(_commitor);
+                        document.getElementById("commits").value = window.btoa(_commits);
+                        document.getElementById("form0").submit();
+                    }
+                };
+            </script>
+        </form>
+
+    </body>
+</html>

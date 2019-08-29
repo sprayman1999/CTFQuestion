@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose option</title>
+</head>
+    <body>
+        <form action="/upload" method="post">
+            <br/>To hesitate is to lose<br/>
+                <label><input name="op" type="radio" value="1" />1. I Wanna make something different</label><br/>
+                <label><input name="op" type="radio" value="2" />2. No I regret</label><br/>
+                <label><input name="op" type="radio" value="3" />3. Do it</label><br/>
+                <label><input name="op" type="radio" value="4" />4. Exit</label><br/>
+                
+                    <td><input type="submit" value="choose an option!"></td>
+                {{content | safe}}
+        </form>
+	
+	</body>
+</html>
+	
